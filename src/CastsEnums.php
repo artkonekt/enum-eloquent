@@ -12,14 +12,8 @@
 
 namespace Konekt\Enum\Eloquent;
 
-
-use Illuminate\Database\Eloquent\Concerns\HasAttributes;
-
 trait CastsEnums
 {
-    use HasAttributes {
-        getAttributeValue as baseGetAttributeValue;
-    }
 
     /**
      * Get a plain attribute (not a relationship).
@@ -29,14 +23,58 @@ trait CastsEnums
      */
     public function getAttributeValue($key)
     {
-        if (isset($this->enums[$key])) {
+        if ($this->isEnumAttribute($key)) {
             $class = $this->enums[$key];
 
             return $class::create($this->getAttributeFromArray($key));
         }
 
-        return $this->baseGetAttributeValue($key);
+        return parent::getAttributeValue($key);
     }
 
+    /**
+     * Get an attribute from the model.
+     *
+     * @param  string  $key
+     * @return mixed
+     */
+    public function getAttribute($key)
+    {
+        if ($this->isEnumAttribute($key)) {
+            return $this->getAttributeValue($key);
+        }
+
+        return parent::getAttribute($key);
+    }
+
+    /**
+     * Set a given attribute on the model.
+     *
+     * @param  string  $key
+     * @param  mixed  $value
+     * @return $this
+     */
+    public function setAttribute($key, $value)
+    {
+        if ($this->isEnumAttribute($key)) {
+            $this->attributes[$key] = $value instanceof $this->enums[$key] ? $value->value() : $value;
+
+            return $this;
+        }
+
+        parent::setAttribute($key, $value);
+    }
+
+    /**
+     * Returns whether the attribute was marked as enum
+     *
+     * @param $key
+     *
+     * @return bool
+     */
+    private function isEnumAttribute($key)
+    {
+        return isset($this->enums[$key]);
+    }
 
 }
