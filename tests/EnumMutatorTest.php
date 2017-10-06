@@ -69,4 +69,14 @@ class EnumMutatorTest extends TestCase
         $this->assertTrue($order->status->equals(OrderStatus::SHIPPING()));
     }
 
+    /**
+     * @test
+     */
+    public function it_doesnt_accept_scalars_that_arent_valid_enum_values()
+    {
+        $this->expectException(\UnexpectedValueException::class);
+        $order = new Order();
+        $order->status = 'wtf';
+    }
+
 }

@@ -57,7 +57,12 @@ trait CastsEnums
     public function setAttribute($key, $value)
     {
         if ($this->isEnumAttribute($key)) {
-            $this->attributes[$key] = $value instanceof $this->enums[$key] ? $value->value() : $value;
+            $enumClass = $this->enums[$key];
+            if (! $value instanceof $enumClass) {
+                $value = new $enumClass($value);
+            }
+
+            $this->attributes[$key] = $value->value();
 
             return $this;
         }
