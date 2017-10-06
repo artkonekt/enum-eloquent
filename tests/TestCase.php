@@ -45,8 +45,15 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         $this->capsule->schema()->create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->string('number');
+            $table->integer('client_id')->unsigned()->nullable();
             $table->enum('status', OrderStatus::values());
             $table->boolean('is_active')->default(true);
+            $table->timestamps();
+        });
+
+        $this->capsule->schema()->create('clients', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
 

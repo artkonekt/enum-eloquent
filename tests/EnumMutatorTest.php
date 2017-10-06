@@ -50,7 +50,23 @@ class EnumMutatorTest extends TestCase
         $order->save();
 
         $this->assertTrue($order->status->equals(OrderStatus::PROCESSING()));
+    }
 
+    /**
+     * @test
+     */
+    public function it_accepts_enum_object_on_mass_assignment()
+    {
+        $order = Order::create([
+            'number' => 'MIAAVC7',
+            'status' => OrderStatus::PROCESSING()
+        ]);
+
+        $this->assertTrue($order->status->equals(OrderStatus::PROCESSING()));
+
+        $order->update(['status' => OrderStatus::SHIPPING()]);
+
+        $this->assertTrue($order->status->equals(OrderStatus::SHIPPING()));
     }
 
 }

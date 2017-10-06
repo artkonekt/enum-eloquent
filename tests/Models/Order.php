@@ -30,4 +30,12 @@ class Order extends Model
         'status' => OrderStatus::class
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
+
 }
