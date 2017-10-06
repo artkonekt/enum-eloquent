@@ -10,6 +10,8 @@ This package provides support for auto casting [konekt enum](https://github.com/
 
 > Supported Konekt Enum versions are 2.0+ and Eloquent 5.0+
 
+[Changelog](Changelog.md)
+
 ## Installation
 
 `composer require konekt/enum-eloquent`
