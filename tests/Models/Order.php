@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
-
 use Illuminate\Database\Eloquent\Model;
 use Konekt\Enum\Eloquent\CastsEnums;
 
@@ -37,5 +36,4 @@ class Order extends Model
     {
         return $this->belongsTo(Client::class);
     }
-
 }

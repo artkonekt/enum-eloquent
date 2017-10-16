@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests;
 
-
 use Konekt\Enum\Eloquent\Tests\Models\Client;
 use Konekt\Enum\Eloquent\Tests\Models\Order;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
@@ -85,14 +84,12 @@ class EnumAccessorTest extends TestCase
         $client = Client::create(['name' => 'Britney Spears']);
 
         $order = Order::create([
-            'number' => 'LDYG4G4',
-            'status' => OrderStatus::PROCESSING,
+            'number'    => 'LDYG4G4',
+            'status'    => OrderStatus::PROCESSING,
             'client_id' => $client->id
         ]);
 
         $this->assertInstanceOf(Client::class, $order->client);
         $this->assertEquals($client->id, $order->client->id);
-
     }
-
 }

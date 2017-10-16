@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests\Resolvers;
 
-
 use Konekt\Enum\Eloquent\Tests\Models\AddressType;
 
 class AddressTypeResolver
@@ -26,5 +25,4 @@ class AddressTypeResolver
     {
         return AddressType::class;
     }
-
 }

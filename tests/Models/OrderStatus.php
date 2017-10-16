@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
-
 use Konekt\Enum\Enum;
 
 class OrderStatus extends Enum
@@ -23,5 +22,4 @@ class OrderStatus extends Enum
     const PROCESSING = 'processing';
     const SHIPPING   = 'shipping';
     const COMPLETED  = 'completed';
-
 }

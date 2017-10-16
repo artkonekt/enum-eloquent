@@ -66,8 +66,5 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
             $table->string('address')->nullable();
             $table->timestamps();
         });
-
     }
-
-
 }

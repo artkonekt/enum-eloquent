@@ -12,11 +12,9 @@
 
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
     protected $guarded = ['id'];
-
 }

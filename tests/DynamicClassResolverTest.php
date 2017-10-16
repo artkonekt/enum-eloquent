@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests;
 
-
 use Konekt\Enum\Eloquent\Tests\Models\Address;
 use Konekt\Enum\Eloquent\Tests\Models\AddressStatus;
 use Konekt\Enum\Eloquent\Tests\Models\AddressType;
@@ -25,7 +24,7 @@ class DynamicClassResolverTest extends TestCase
     public function it_resolves_fqcn_enum_class_name_from_the_at_notation()
     {
         $address = Address::create([
-            'type' => AddressType::SHIPPING,
+            'type'    => AddressType::SHIPPING,
             'address' => 'Richard Avenue 33'
         ]);
 
@@ -38,11 +37,10 @@ class DynamicClassResolverTest extends TestCase
     public function it_resolves_local_enum_class_name_from_the_at_notation()
     {
         $address = Address::create([
-            'type' => AddressType::SHIPPING,
+            'type'    => AddressType::SHIPPING,
             'address' => 'Richard Avenue 33'
         ]);
 
         $this->assertInstanceOf(AddressStatus::class, $address->status);
     }
-
 }
