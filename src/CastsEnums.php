@@ -110,5 +110,4 @@ trait CastsEnums
 
         return $result;
     }
-
 }

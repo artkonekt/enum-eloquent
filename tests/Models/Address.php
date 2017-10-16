@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
-
 use Illuminate\Database\Eloquent\Model;
 use Konekt\Enum\Eloquent\CastsEnums;
 
@@ -26,5 +25,4 @@ class Address extends Model
         'type'   => 'Konekt\\Enum\\Eloquent\\Tests\\Resolvers\\AddressTypeResolver@enumClass',
         'status' => 'AddressStatusResolver@enumClass'
     ];
-
 }

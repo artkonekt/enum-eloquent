@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests;
 
-
 use Konekt\Enum\Eloquent\Tests\Models\Order;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
 
@@ -75,8 +74,7 @@ class EnumMutatorTest extends TestCase
     public function it_doesnt_accept_scalars_that_arent_valid_enum_values()
     {
         $this->expectException(\UnexpectedValueException::class);
-        $order = new Order();
+        $order         = new Order();
         $order->status = 'wtf';
     }
-
 }

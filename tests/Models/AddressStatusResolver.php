@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
-
 class AddressStatusResolver
 {
     /**
@@ -24,5 +23,4 @@ class AddressStatusResolver
     {
         return AddressStatus::class;
     }
-
 }
