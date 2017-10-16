@@ -41,6 +41,8 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         $this->capsule->bootEloquent();
 
         $this->capsule->schema()->dropIfExists('orders');
+        $this->capsule->schema()->dropIfExists('clients');
+        $this->capsule->schema()->dropIfExists('addresses');
 
         $this->capsule->schema()->create('orders', function (Blueprint $table) {
             $table->increments('id');
@@ -54,6 +56,14 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         $this->capsule->schema()->create('clients', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->timestamps();
+        });
+
+        $this->capsule->schema()->create('addresses', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('type');
+            $table->string('status')->nullable();
+            $table->string('address')->nullable();
             $table->timestamps();
         });
 

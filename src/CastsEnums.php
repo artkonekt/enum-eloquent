@@ -24,7 +24,7 @@ trait CastsEnums
     public function getAttributeValue($key)
     {
         if ($this->isEnumAttribute($key)) {
-            $class = $this->enums[$key];
+            $class = $this->getEnumClass($key);
 
             return $class::create($this->getAttributeFromArray($key));
         }
@@ -57,7 +57,7 @@ trait CastsEnums
     public function setAttribute($key, $value)
     {
         if ($this->isEnumAttribute($key)) {
-            $enumClass = $this->enums[$key];
+            $enumClass = $this->getEnumClass($key);
             if (! $value instanceof $enumClass) {
                 $value = new $enumClass($value);
             }
@@ -80,6 +80,35 @@ trait CastsEnums
     private function isEnumAttribute($key)
     {
         return isset($this->enums[$key]);
+    }
+
+    /**
+     * Returns the enum class. Supports 'FQCN\Class@method()' notation
+     *
+     * @param $key
+     *
+     * @return mixed
+     */
+    private function getEnumClass($key)
+    {
+        $result = $this->enums[$key];
+        if (strpos($result, '@')) {
+            $class  = str_before($result, '@');
+            $method = str_after($result, '@');
+
+            // If no namespace was set, prepend the Model's namespace to the
+            // class that resolves the enum class. Prevent this behavior,
+            // by setting the resolver class with a leading backslash
+            if (class_basename($class) == $class) {
+                $class =
+                    str_before(get_class($this), class_basename(get_class($this))) . // namespace of the model
+                    $class;
+            }
+
+            $result = $class::$method();
+        }
+
+        return $result;
     }
 
 }
