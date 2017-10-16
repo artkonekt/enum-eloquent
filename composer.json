@@ -23,7 +23,10 @@
         "illuminate/events": "5.*"
     },
     "autoload": {
-        "psr-4": { "Konekt\\Enum\\Eloquent\\": "src/" }
+        "psr-4": { "Konekt\\Enum\\Eloquent\\": "src/" },
+        "files": [
+            "src/functions.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
