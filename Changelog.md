@@ -7,4 +7,4 @@
 ###### 2017-10-06
 
 - Initial release for Enum 2.0+, Eloquent 5.0 - 5.5
-- Works likes Eloquent's `$cast` property on models, but internally hooks into the mutator/accessor mechanism
+- Works like Eloquent's `$cast` property on models, but internally hooks into the mutator/accessor mechanism

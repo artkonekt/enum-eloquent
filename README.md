@@ -1,10 +1,10 @@
 # Konekt Enum Eloquent Bindings
 
 
-[![Build Status](https://travis-ci.org/artkonekt/enum-eloquent.png?branch=master)](https://travis-ci.org/artkonekt/enum-eloquent)
-[![Latest Stable Version](https://poser.pugx.org/konekt/enum-eloquent/version.png)](https://packagist.org/packages/konekt/enum-eloquent)
-[![Total Downloads](https://poser.pugx.org/konekt/enum-eloquent/downloads.png)](https://packagist.org/packages/konekt/enum-eloquent)
-[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![Travis Build Status](https://img.shields.io/travis/artkonekt/enum-eloquent.svg?style=flat-square)](https://travis-ci.org/artkonekt/enum-eloquent)
+[![Packagist Stable Version](https://img.shields.io/packagist/v/konekt/enum-eloquent.svg?style=flat-square&label=stable)](https://packagist.org/packages/konekt/enum-eloquent)
+[![Packagist downloads](https://img.shields.io/packagist/dt/konekt/enum-eloquent.svg?style=flat-square)](https://packagist.org/packages/konekt/enum-eloquent)
+[![MIT Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.md)
 
 This package provides support for auto casting [konekt enum](https://github.com/artkonekt/enum) fields in [Eloquent models](https://laravel.com/docs/5.4/eloquent-mutators).
 
@@ -72,10 +72,10 @@ echo get_class($order->status);
 echo $order->status->value();
 // output: 'pending'
 
-echo $order->status->equals(OrderStatus::PENDING()) ? 'yes' : 'no';
+echo $order->status->isPending() ? 'yes' : 'no';
 // output: yes
 
-echo $order->status->equals(OrderStatus::CANCELLED()) ? 'yes' : 'no';
+echo $order->status->isCancelled() ? 'yes' : 'no';
 // output: no
 
 // You can assign an enum object as attribute value:
@@ -93,7 +93,7 @@ echo $order->status->value();
 
 // It still accepts scalar values:
 $order->status = 'completed';
-echo $order->status->equals(OrderStatus::COMPLETED()) ? 'yes' : 'no';
+echo $order->status->isCompleted() ? 'yes' : 'no';
 // output: yes
 
 // But it doesn't accept scalar values that aren't in the enum:
@@ -104,4 +104,4 @@ $order->status = 'negotiating';
 
 Enjoy!
 
-For detailed usage of konekt enums refer to [its readme](https://github.com/artkonekt/enum).
+For detailed usage of konekt enums refer to the [Konekt Enum Documentation](https://artkonekt.github.io/enum).
