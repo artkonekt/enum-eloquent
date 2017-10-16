@@ -1,12 +1,38 @@
 language: php
 
-php:
-  - 7.0
-  - 7.1
+cache:
+  directories:
+  - "$HOME/.composer/cache"
 
-
-before_script:
-  - composer install --no-interaction
+matrix:
+  include:
+  - php: 7.0
+    env: LARAVEL=5.0
+  - php: 7.0
+    env: LARAVEL=5.1
+  - php: 7.0
+    env: LARAVEL=5.2
+  - php: 7.0
+    env: LARAVEL=5.3
+  - php: 7.0
+    env: LARAVEL=5.4
+  - php: 7.0
+    env: LARAVEL=5.5
+  - php: 7.1
+    env: LARAVEL=5.4
+  - php: 7.1
+    env: LARAVEL=5.5
 
 script:
-  - vendor/bin/phpunit -c phpunit.xml tests/
+- vendor/bin/phpunit -c phpunit.xml tests/
+
+before_install:
+- composer require "illuminate/database:${LARAVEL}.*" --no-update -v
+- composer require "illuminate/events:${LARAVEL}.*" --no-update -v
+
+install: composer install --no-interaction
+
+notifications:
+  email: false
+  slack:
+    secure: IQU+s/xkkRxzYVFyTbd++GTyFlj1ndBRdEoFC+NPo7S2nS42j4KgNIeOnhkIvyap8yzi/Ju9EvS0KbR1hhHNrqeNGIPumUzBJbjOJAtpWuZ7ZHBBqv8CCA5XtHOv4POi9tU5NUq1ybxxr3xlPsLLmxamGSt7coORDtB7w54QbHSh+ISEsQaRYlWbU2WeinaO8/adrZ6VGbBiYvdeY8drAFHkX//F8R802K3Auf+2TFIL6xXh9d48Ii8Gq0zBdM6Kjm6VkwIK9o3hv7vdrqq+IrXe3JDwKes8T2j5dDQXL3Q7+rpI9KEV4DkZYSZfbQ6rfztfJvEbaREFFC6qJ8VIh/REnmu02qvp30QgxbxBXmqh9exGeEddiIddhF4aGzgi+F/WiGhe0IIjOc1Rehwv1xLbA+EKXhoKfJDRN2tzl6Pn/cXG9I/20r89fKR8MrnNjgv7s0cyff/yfaWj5o4dvdFspoPtDEWXeqGemRDbAquHrBENrGInDIaRQBNC4R0ntiiojuNwGU2bUsB/QB8p4x7yakmwKGc3CjXl5vmp3uhzbGOdPGOkTNBsv78vlR430jbA5NrWzwsI+b0JdvMMhHRB5yaPKqoEh3SgkAumxNJ/kvnhq6iWQcBxkqLgM/DYDaX2jHARjRdQ4AXw/AfI5U4uXURM4lEUnDChwX+SOBw=
