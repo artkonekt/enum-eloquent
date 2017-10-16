@@ -1,5 +1,15 @@
 # Changelog
+
 ### Konekt Enum Eloquent
+
+## 1.1
+
+### 1.1.0
+###### 2017-10-16
+
+- Added support for `ClassName@method` notation
+- Travis tests PHP 7 with Laravel 5.0-5.5 & PHP7.1 with Laravel 5.4-5.5
+
 
 ## 1.0
 
