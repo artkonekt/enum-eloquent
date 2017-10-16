@@ -103,6 +103,57 @@ $order->status = 'negotiating';
 // Given value (negotiating) is not in enum `App\OrderStatus`
 ```
 
+### Resolving Enum Class Runtime
+
+It is possible to defer the resolution of an Enum class to runtime.
+
+It happens using the `ClassName@method` notation known from Laravel.
+
+This is useful for libraries, so you can 'late-bind' the actual enum class and let the user to extend it.
+
+#### Example
+
+**The Model:**
+
+```php
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+use Konekt\Enum\Eloquent\CastsEnums;
+
+class Order extends Model
+{
+    use CastsEnums;
+
+    protected $enums = [
+        'status' => 'OrderStatusResolver@enumClass'
+    ];
+}
+```
+
+**The Resolver:**
+
+```php
+namespace App;
+
+class OrderStatusResolver
+{
+    /**
+     * Returns the enum class to use as order status enum
+     *
+     * @return string
+     */
+    public static function enumClass()
+    {
+        return config('app.order.status.class', OrderStatus::class);
+    }
+}
+```
+
+This way the enum class becomes configurable without the need to modify the Model code.
+
+---
+
 Enjoy!
 
 For detailed usage of konekt enums refer to the [Konekt Enum Documentation](https://artkonekt.github.io/enum).
