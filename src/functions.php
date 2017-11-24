@@ -32,3 +32,24 @@ if (!function_exists('str_after')) {
         return $search === '' ? $subject : array_reverse(explode($search, $subject, 2))[0];
     }
 }
+
+if (!function_exists('str_replace_last')) {
+    /**
+     * Replace the last occurrence of a given value in the string.
+     *
+     * @param  string  $search
+     * @param  string  $replace
+     * @param  string  $subject
+     * @return string
+     */
+    function str_replace_last($search, $replace, $subject)
+    {
+        $position = strrpos($subject, $search);
+
+        if ($position !== false) {
+            return substr_replace($subject, $replace, $position, strlen($search));
+        }
+
+        return $subject;
+    }
+}
