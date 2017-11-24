@@ -66,5 +66,11 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
             $table->string('address')->nullable();
             $table->timestamps();
         });
+
+        $this->capsule->schema()->create('eloquents', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('type')->nullable();
+            $table->timestamps();
+        });
     }
 }

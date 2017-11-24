@@ -101,8 +101,11 @@ trait CastsEnums
             // by setting the resolver class with a leading backslash
             if (class_basename($class) == $class) {
                 $class =
-                    str_before(get_class($this), class_basename(get_class($this))) . // namespace of the model
-                    $class;
+                    str_replace_last(
+                        class_basename(get_class($this)),
+                        $class,
+                        get_class($this)
+                    );
             }
 
             $result = $class::$method();

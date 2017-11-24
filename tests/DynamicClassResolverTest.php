@@ -15,6 +15,8 @@ namespace Konekt\Enum\Eloquent\Tests;
 use Konekt\Enum\Eloquent\Tests\Models\Address;
 use Konekt\Enum\Eloquent\Tests\Models\AddressStatus;
 use Konekt\Enum\Eloquent\Tests\Models\AddressType;
+use Konekt\Enum\Eloquent\Tests\Models\Eloquent;
+use Konekt\Enum\Eloquent\Tests\Models\EloquentType;
 
 class DynamicClassResolverTest extends TestCase
 {
@@ -42,5 +44,15 @@ class DynamicClassResolverTest extends TestCase
         ]);
 
         $this->assertInstanceOf(AddressStatus::class, $address->status);
+    }
+
+    /**
+     * @test
+     */
+    public function at_notation_does_not_collide_if_class_name_is_in_nampespace()
+    {
+        $eloquent = Eloquent::create();
+
+        $this->assertInstanceOf(EloquentType::class, $eloquent->type);
     }
 }
