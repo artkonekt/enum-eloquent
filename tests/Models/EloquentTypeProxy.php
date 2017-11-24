@@ -12,12 +12,10 @@
 
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
-
 class EloquentTypeProxy
 {
     public static function enumClass()
     {
         return EloquentType::class;
     }
-
 }

@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
-
 use Konekt\Enum\Enum;
 
 class EloquentType extends Enum
@@ -22,5 +21,4 @@ class EloquentType extends Enum
     const NADA      = null;
     const WHATEVER  = 'whatever';
     const NEVERMIND = 'nevermind';
-
 }

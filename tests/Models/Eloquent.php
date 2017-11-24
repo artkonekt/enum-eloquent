@@ -12,7 +12,6 @@
 
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
-
 use Illuminate\Database\Eloquent\Model;
 use Konekt\Enum\Eloquent\CastsEnums;
 
@@ -27,5 +26,4 @@ class Eloquent extends Model
     protected $enums = [
         'type' => 'EloquentTypeProxy@enumClass'
     ];
-
 }
