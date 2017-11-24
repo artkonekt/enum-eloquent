@@ -4,6 +4,13 @@
 
 ## 1.1
 
+### 1.1.1
+###### 2017-11-24
+
+- Fixed bug with `ClassName@method` notation resolution when the host
+  model's base class name was present in the namespace.
+
+
 ### 1.1.0
 ###### 2017-10-16
 
