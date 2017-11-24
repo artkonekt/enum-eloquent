@@ -51,7 +51,7 @@ class DynamicClassResolverTest extends TestCase
      */
     public function at_notation_does_not_collide_if_class_name_is_in_nampespace()
     {
-        $eloquent = Eloquent::create();
+        $eloquent = Eloquent::create([]);
 
         $this->assertInstanceOf(EloquentType::class, $eloquent->type);
     }
