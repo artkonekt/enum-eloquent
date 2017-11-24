@@ -4,6 +4,11 @@
 
 ## 1.1
 
+### 1.1.2
+###### 2017-11-24
+
+- Fixed Laravel 5.0 & 5.1 incompatibility introduced with v1.1.1
+
 ### 1.1.1
 ###### 2017-11-24
 
