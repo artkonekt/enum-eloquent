@@ -22,6 +22,10 @@ matrix:
     env: LARAVEL=5.4
   - php: 7.1
     env: LARAVEL=5.5
+  - php: 7.2
+      env: LARAVEL=5.4
+  - php: 7.2
+      env: LARAVEL=5.5
 
 script:
 - vendor/bin/phpunit -c phpunit.xml tests/
