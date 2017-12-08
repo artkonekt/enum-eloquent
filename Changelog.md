@@ -4,6 +4,12 @@
 
 ## 1.1
 
+### 1.1.3
+###### 2017-12-08
+
+- Fixed namespace creep bug with @notation on extended classes
+- PHP 7.2 is supported (Laravel 5.4 & 5.5)
+
 ### 1.1.2
 ###### 2017-11-24
 
