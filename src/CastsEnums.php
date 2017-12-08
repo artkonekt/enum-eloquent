@@ -104,7 +104,7 @@ trait CastsEnums
                     str_replace_last(
                         class_basename(get_class($this)),
                         $class,
-                        get_class($this)
+                        self::class
                     );
             }
 
