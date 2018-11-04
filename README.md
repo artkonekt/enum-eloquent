@@ -164,7 +164,7 @@ This will fix a problem where the forms package detects the enum label instead o
 as the value of the field.
 
 It is being done by adding the (undocumented) `getFormValue()` method to the model, that is being
-used by the forms library to obtain form value.
+used by the forms library to obtain form field value.
 
 ---
 
