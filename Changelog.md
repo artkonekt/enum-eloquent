@@ -5,7 +5,7 @@
 ## 1.2
 
 ### 1.2.0
-###### 2018-11-04 (Unreleased)
+###### 2018-11-04
 
 - Added Laravel Collective Forms compatibility (optional)
 - `isEnumAttribute()` method became protected (was private before)
