@@ -152,6 +152,20 @@ class OrderStatusResolver
 
 This way the enum class becomes configurable without the need to modify the Model code.
 
+## Laravel Collective Forms Compatibility
+
+Laravel Collective [Forms Package](https://laravelcollective.com/docs/master/html) provides the
+`Form` facade known from Laravel v4.x.
+
+In case you want to use the Forms package with this one, you need to add the
+`EnumsAreCompatibleWithLaravelForms` trait to your model, next to `CastsEnums`.
+
+This will fix a problem where the forms package detects the enum label instead of its actual value
+as the value of the field.
+
+It is being done by adding the (undocumented) `getFormValue()` method to the model, that is being
+used by the forms library to obtain form value.
+
 ---
 
 Enjoy!

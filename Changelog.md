@@ -2,6 +2,15 @@
 
 ### Konekt Enum Eloquent
 
+## 1.2
+
+### 1.2.0
+###### 2018-11-04 (Unreleased)
+
+- Added Laravel Collective Forms compatibility (optional)
+- `isEnumAttribute()` method became protected (was private before)
+- Laravel 5.6 & 5.7 are supported
+
 ## 1.1
 
 ### 1.1.3

@@ -9,12 +9,10 @@
  *
  */
 
-
 namespace Konekt\Enum\Eloquent;
 
 trait CastsEnums
 {
-
     /**
      * Get a plain attribute (not a relationship).
      *
@@ -77,7 +75,7 @@ trait CastsEnums
      *
      * @return bool
      */
-    private function isEnumAttribute($key)
+    protected function isEnumAttribute($key)
     {
         return isset($this->enums[$key]);
     }
