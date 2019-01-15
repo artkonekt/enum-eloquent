@@ -1,0 +1,23 @@
+<?php
+
+namespace DummyNamespace;
+
+use Konekt\Enum\Enum;
+
+class DummyClass extends Enum
+{
+    const __default = self::OPTION_ONE;
+
+    const OPTION_ONE = 'option_one';
+    const OPTION_TWO = 'option_two';
+
+    public static $labels = [];
+
+    protected static function boot()
+    {
+        static::$labels = [
+            self::OPTION_ONE => __('Option #1'),
+            self::OPTION_TWO => __('Option #2'),
+        ];
+    }
+}
