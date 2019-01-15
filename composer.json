@@ -36,6 +36,11 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.2-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Konekt\\Enum\\Eloquent\\EnumServiceProvider"
+            ]
         }
     }
 }
