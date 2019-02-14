@@ -2,6 +2,12 @@
 
 ### Konekt Enum Eloquent
 
+## 1.3
+
+### Unreleased
+
+- Added make:enum commands (when using in a Laravel application)
+
 ## 1.2
 
 ### 1.2.0
