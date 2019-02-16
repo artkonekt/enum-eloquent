@@ -43,7 +43,7 @@ class EnumAccessorTest extends TestCase
         ]);
 
         $this->assertInstanceOf(OrderStatus::class, $order->status);
-        $this->assertEquals(OrderStatus::__default, $order->status->value());
+        $this->assertEquals(OrderStatus::__DEFAULT, $order->status->value());
     }
 
     /**

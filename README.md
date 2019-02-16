@@ -33,7 +33,7 @@ use Konekt\Enum\Enum;
 
 class OrderStatus extends Enum
 {
-    const __default = self::PENDING;
+    const __DEFAULT = self::PENDING;
 
     const PENDING   = 'pending';
     const CANCELLED = 'cancelled';

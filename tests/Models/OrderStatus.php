@@ -16,7 +16,7 @@ use Konekt\Enum\Enum;
 
 class OrderStatus extends Enum
 {
-    const __default = self::SUBMITTED;
+    const __DEFAULT = self::SUBMITTED;
 
     const SUBMITTED  = 'submitted';
     const PROCESSING = 'processing';

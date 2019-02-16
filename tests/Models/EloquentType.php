@@ -16,7 +16,7 @@ use Konekt\Enum\Enum;
 
 class EloquentType extends Enum
 {
-    const __default = self::NADA;
+    const __DEFAULT = self::NADA;
 
     const NADA      = null;
     const WHATEVER  = 'whatever';
