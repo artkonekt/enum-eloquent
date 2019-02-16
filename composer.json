@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "konekt/enum": "^2.0.2",
+        "konekt/enum": "2.2.*",
         "illuminate/database": "5.*"
     },
     "require-dev": {
