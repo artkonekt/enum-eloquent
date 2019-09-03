@@ -8,6 +8,7 @@
 
 - Added make:enum commands (when using in a Laravel application)
 - Enum 3.0.0 is supported
+- Updated references to https://konekt.dev/enum website
 
 ## 1.2
 

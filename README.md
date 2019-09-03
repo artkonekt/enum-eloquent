@@ -7,7 +7,7 @@
 [![StyleCI](https://styleci.io/repos/105900484/shield?branch=master)](https://styleci.io/repos/105900484)
 [![MIT Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.md)
 
-This package provides support for auto casting [konekt enum](https://github.com/artkonekt/enum) fields in [Eloquent models](https://laravel.com/docs/5.4/eloquent-mutators).
+This package provides support for auto casting [konekt enum](https://konekt.dev/enum) fields in [Eloquent models](https://laravel.com/docs/5.4/eloquent-mutators).
 
 > Supported Konekt Enum versions are 2.0+ or 3.0+ and Eloquent 5.0+
 
@@ -171,4 +171,4 @@ used by the forms library to obtain form field value.
 
 Enjoy!
 
-For detailed usage of konekt enums refer to the [Konekt Enum Documentation](https://artkonekt.github.io/enum).
+For detailed usage of konekt enums refer to the [Konekt Enum Documentation](https://konekt.dev/enum).
