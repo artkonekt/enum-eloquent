@@ -7,6 +7,7 @@
 ### Unreleased
 
 - Added make:enum commands (when using in a Laravel application)
+- Enum 3.0.0 is supported
 
 ## 1.2
 

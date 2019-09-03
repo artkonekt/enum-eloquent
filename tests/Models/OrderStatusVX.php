@@ -14,9 +14,10 @@ namespace Konekt\Enum\Eloquent\Tests\Models;
 
 use Konekt\Enum\Enum;
 
-class OrderStatus extends Enum
+class OrderStatusVX extends Enum
 {
     const __DEFAULT = self::SUBMITTED;
+    const __default = self::SUBMITTED; // v2 default for backwards compatibility
 
     const SUBMITTED  = 'submitted';
     const PROCESSING = 'processing';

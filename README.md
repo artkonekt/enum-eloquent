@@ -9,7 +9,7 @@
 
 This package provides support for auto casting [konekt enum](https://github.com/artkonekt/enum) fields in [Eloquent models](https://laravel.com/docs/5.4/eloquent-mutators).
 
-> Supported Konekt Enum versions are 2.0+ and Eloquent 5.0+
+> Supported Konekt Enum versions are 2.0+ or 3.0+ and Eloquent 5.0+
 
 [Changelog](Changelog.md)
 
@@ -33,7 +33,8 @@ use Konekt\Enum\Enum;
 
 class OrderStatus extends Enum
 {
-    const __default = self::PENDING;
+    const __DEFAULT = self::PENDING; 
+    // const __default = self::PENDING; // usage of default in v2.x 
 
     const PENDING   = 'pending';
     const CANCELLED = 'cancelled';
