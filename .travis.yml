@@ -4,6 +4,10 @@ cache:
   directories:
   - "$HOME/.composer/cache"
 
+env:
+- ENUM=3
+- ENUM=2
+
 matrix:
   include:
   - php: 7.0
@@ -48,6 +52,7 @@ script:
 - vendor/bin/phpunit -c phpunit.xml tests/
 
 before_install:
+- composer require "konekt/enum:${ENUM}.*" --no-update -v
 - composer require "illuminate/database:${LARAVEL}.*" --no-update -v
 - composer require "illuminate/events:${LARAVEL}.*" --no-update -v
 
