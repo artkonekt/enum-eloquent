@@ -33,16 +33,6 @@ matrix:
     env: ENUM=2 LARAVEL=5.3
   - php: 7.0
     env: ENUM=2 LARAVEL=5.4
-  - php: 7.0
-    env: ENUM=3 LARAVEL=5.0
-  - php: 7.0
-    env: ENUM=3 LARAVEL=5.1
-  - php: 7.0
-    env: ENUM=3 LARAVEL=5.2
-  - php: 7.0
-    env: ENUM=3 LARAVEL=5.3
-  - php: 7.0
-    env: ENUM=3 LARAVEL=5.4
 
 script:
 - vendor/bin/phpunit -c phpunit.xml tests/
