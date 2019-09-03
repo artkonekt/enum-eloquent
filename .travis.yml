@@ -4,55 +4,26 @@ cache:
   directories:
   - "$HOME/.composer/cache"
 
+php:
+  - '7.0'
+  - '7.1'
+  - '7.2'
+  - '7.3'
+
 env:
-- ENUM=3
-- ENUM=2
-
-matrix:
-  include:
-  - php: 7.0
-    env: LARAVEL=5.0
-  - php: 7.0
-    env: LARAVEL=5.1
-  - php: 7.0
-    env: LARAVEL=5.2
-  - php: 7.0
-    env: LARAVEL=5.3
-  - php: 7.0
-    env: LARAVEL=5.4
-  - php: 7.0
-    env: LARAVEL=5.5
-  - php: 7.1
-    env: LARAVEL=5.4
-  - php: 7.1
-    env: LARAVEL=5.5
-  - php: 7.1
-    env: LARAVEL=5.6
-  - php: 7.1
-    env: LARAVEL=5.7
-  - php: 7.1
-    env: LARAVEL=5.8
-  - php: 7.2
-    env: LARAVEL=5.4
-  - php: 7.2
-    env: LARAVEL=5.5
-  - php: 7.2
-    env: LARAVEL=5.6
-  - php: 7.2
-    env: LARAVEL=5.7
-  - php: 7.2
-    env: LARAVEL=5.8
-  - php: 7.3
-    env: LARAVEL=5.4
-  - php: 7.3
-    env: LARAVEL=5.5
-  - php: 7.3
-    env: LARAVEL=5.6
-  - php: 7.3
-    env: LARAVEL=5.7
-  - php: 7.3
-    env: LARAVEL=5.8
-
+  global:
+    - ENUM=2
+    - ENUM=3
+  matrix:  
+    - LARAVEL=5.0
+    - LARAVEL=5.1
+    - LARAVEL=5.2
+    - LARAVEL=5.3
+    - LARAVEL=5.4
+    - LARAVEL=5.5
+    - LARAVEL=5.6
+    - LARAVEL=5.7
+    - LARAVEL=5.8
 
 script:
 - vendor/bin/phpunit -c phpunit.xml tests/
