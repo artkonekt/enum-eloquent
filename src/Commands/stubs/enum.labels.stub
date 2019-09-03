@@ -6,7 +6,8 @@ use Konekt\Enum\Enum;
 
 class DummyClass extends Enum
 {
-    const __default = self::OPTION_ONE;
+    const __DEFAULT = self::OPTION_ONE;
+    // const __default = self::OPTION_ONE; // default for v2
 
     const OPTION_ONE = 'option_one';
     const OPTION_TWO = 'option_two';
