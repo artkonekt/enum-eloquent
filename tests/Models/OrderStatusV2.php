@@ -1,6 +1,6 @@
 <?php
 /**
- * Contains the OrderStatus class with Enum version 2 default 
+ * Contains the OrderStatus class with Enum version 2 default.
  *
  * @copyright   Copyright (c) 2017 Attila Fulop
  * @author      Mark Boessenkool

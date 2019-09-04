@@ -1,6 +1,6 @@
 <?php
 /**
- * Contains the Order model class for Enum version 2 default
+ * Contains the Order model class for Enum version 2 default.
  *
  * @copyright   Copyright (c) 2017 Attila Fulop
  * @author      Mark Boessenkool
