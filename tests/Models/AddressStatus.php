@@ -16,9 +16,6 @@ use Konekt\Enum\Enum;
 
 class AddressStatus extends Enum
 {
-    const __DEFAULT = self::UNKNOWN;
-    const __default = self::UNKNOWN; // v2 default for backwards compatibility
-
     const UNKNOWN   = null;
     const VALID     = 'valid';
     const INVALID   = 'invalid';
