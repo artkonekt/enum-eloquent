@@ -43,7 +43,7 @@ class EnumAccessorTest extends TestCase
     public function it_returns_the_enum_default_when_attribute_is_null()
     {
         // don't test if mayor version is lower than 3
-        if ($this->getEnumVersionMayor() < 3) {
+        if ($this->getEnumVersionMajor() < 3) {
             $this->assertTrue(true);
             return;
         }
@@ -62,7 +62,7 @@ class EnumAccessorTest extends TestCase
     public function it_returns_the_enum_v2_default_when_attribute_is_null()
     {
         // don't test if mayor version is 3 or higher
-        if ($this->getEnumVersionMayor() >= 3) {
+        if ($this->getEnumVersionMajor() >= 3) {
             $this->assertTrue(true);
             return;
         }
@@ -145,7 +145,7 @@ class EnumAccessorTest extends TestCase
         return $parts[0];
     }
     
-    private function getEnumVersionMayor()
+    private function getEnumVersionMajor()
     {
         $parts = explode('.', $this->getEnumVersion());
         
