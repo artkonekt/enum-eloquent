@@ -1,11 +1,11 @@
 <?php
 /**
- * Contains the Order model class.
+ * Contains the Order model class for Enum version 2 default
  *
  * @copyright   Copyright (c) 2017 Attila Fulop
- * @author      Attila Fulop
+ * @author      Mark Boessenkool
  * @license     MIT
- * @since       2017-10-05
+ * @since       2019-09-03
  *
  */
 
