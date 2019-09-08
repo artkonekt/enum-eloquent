@@ -11,10 +11,18 @@
         {
             "name": "Attila Fulop",
             "homepage": "https://github.com/fulopattila122"
+        },
+        {
+            "name": "Semyon Chetvertnyh",
+            "homepage": "https://github.com/semyonchetvertnyh"
+        },
+        {
+            "name": "Mark Boessenkool",
+            "homepage": "https://github.com/TheM1984"
         }
     ],
     "require": {
-        "php": ">=7.0.0",
+        "php": "^7.1.3",
         "konekt/enum": "^2.0.2 || ^3.0.0",
         "illuminate/database": "5.*"
     },
