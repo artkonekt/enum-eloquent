@@ -23,6 +23,13 @@ env:
   - ENUM=3 LARAVEL=5.8
   - ENUM=3 LARAVEL=6.0
 
+matrix:
+  exclude:
+    - php: '7.1'
+      env: 'ENUM=2 LARAVEL=6.0'
+    - php: '7.1'
+      env: 'ENUM=3 LARAVEL=6.0'
+
 script:
 - vendor/bin/phpunit -c phpunit.xml tests/
 
