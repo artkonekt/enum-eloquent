@@ -15,12 +15,13 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "konekt/enum": "^2.0.2",
+        "konekt/enum": "^2.0.2 || ^3.0.0",
         "illuminate/database": "5.*"
     },
     "require-dev": {
         "phpunit/phpunit": "6.3 - 7.4",
-        "illuminate/events": "5.*"
+        "illuminate/events": "5.*",
+        "ocramius/package-versions": "^1.2"
     },
     "autoload": {
         "psr-4": { "Konekt\\Enum\\Eloquent\\": "src/" },

@@ -15,6 +15,10 @@ namespace Konekt\Enum\Eloquent\Tests;
 use Konekt\Enum\Eloquent\Tests\Models\Client;
 use Konekt\Enum\Eloquent\Tests\Models\Order;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
+use Konekt\Enum\Eloquent\Tests\Models\OrderV2;
+use Konekt\Enum\Eloquent\Tests\Models\OrderStatusV2;
+use Konekt\Enum\Eloquent\Tests\Models\OrderVX;
+use Konekt\Enum\Eloquent\Tests\Models\OrderStatusVX;
 
 class EnumAccessorTest extends TestCase
 {
@@ -38,12 +42,51 @@ class EnumAccessorTest extends TestCase
      */
     public function it_returns_the_enum_default_when_attribute_is_null()
     {
+        // don't test if mayor version is lower than 3
+        if ($this->getEnumVersionMajor() < 3) {
+            $this->assertTrue(true);
+            return;
+        }
+        
         $order = new Order([
             'number' => 'PLGU7S5'
         ]);
 
         $this->assertInstanceOf(OrderStatus::class, $order->status);
-        $this->assertEquals(OrderStatus::__default, $order->status->value());
+        $this->assertEquals(OrderStatus::__DEFAULT, $order->status->value());
+    }
+    
+    /**
+     * @test
+     */
+    public function it_returns_the_enum_v2_default_when_attribute_is_null()
+    {
+        // don't test if mayor version is 3 or higher
+        if ($this->getEnumVersionMajor() >= 3) {
+            $this->assertTrue(true);
+            return;
+        }
+        
+        $order = new OrderV2([
+            'number' => 'PLGU7S5'
+        ]);
+
+        $this->assertInstanceOf(OrderStatusV2::class, $order->status);
+        $this->assertEquals(OrderStatusV2::__default, $order->status->value());
+    }
+        
+    /**
+     * @test
+     */
+    public function it_returns_the_enum_backwards_compatible_default_when_attribute_is_null()
+    {
+        $order = new OrderVX([
+            'number' => 'PLGU7S5'
+        ]);
+
+        $this->assertInstanceOf(OrderStatusVX::class, $order->status);
+        $this->assertEquals(OrderStatusVX::__DEFAULT, $order->status->value());
+        $this->assertEquals(OrderStatusVX::__default, $order->status->value());
     }
 
     /**
@@ -91,5 +134,21 @@ class EnumAccessorTest extends TestCase
 
         $this->assertInstanceOf(Client::class, $order->client);
         $this->assertEquals($client->id, $order->client->id);
+    }
+    
+    private function getEnumVersion()
+    {
+        $raw_version = \PackageVersions\Versions::getVersion('konekt/enum');
+        
+        $parts = explode('@', $raw_version);
+        
+        return $parts[0];
+    }
+    
+    private function getEnumVersionMajor()
+    {
+        $parts = explode('.', $this->getEnumVersion());
+        
+        return $parts[0];
     }
 }
