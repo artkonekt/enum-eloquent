@@ -1,6 +1,11 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## 1.3.1
+##### 2019-09-08
+
+- Fixed Laravel 6.0 Support
+
 ## 1.3.0
 ##### 2019-09-08
 
