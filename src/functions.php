@@ -4,7 +4,6 @@
  * - str_before on Laravel < v5.5
  * - str_after  on Laravel < v5.4
  */
-
 if (!function_exists('str_before')) {
     /**
      * Get the portion of a string before a given value.
@@ -15,7 +14,7 @@ if (!function_exists('str_before')) {
      */
     function str_before($subject, $search)
     {
-        return $search === '' ? $subject : explode($search, $subject)[0];
+        return '' === $search ? $subject : explode($search, $subject)[0];
     }
 }
 
@@ -29,7 +28,7 @@ if (!function_exists('str_after')) {
      */
     function str_after($subject, $search)
     {
-        return $search === '' ? $subject : array_reverse(explode($search, $subject, 2))[0];
+        return '' === $search ? $subject : array_reverse(explode($search, $subject, 2))[0];
     }
 }
 
@@ -46,7 +45,7 @@ if (!function_exists('str_replace_last')) {
     {
         $position = strrpos($subject, $search);
 
-        if ($position !== false) {
+        if (false !== $position) {
             return substr_replace($subject, $replace, $position, strlen($search));
         }
 

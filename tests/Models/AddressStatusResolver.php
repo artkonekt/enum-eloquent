@@ -9,7 +9,6 @@
  *
  */
 
-
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
 class AddressStatusResolver

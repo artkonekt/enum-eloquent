@@ -9,7 +9,6 @@
  *
  */
 
-
 namespace Konekt\Enum\Eloquent\Tests\Models\Extended;
 
 class Address extends \Konekt\Enum\Eloquent\Tests\Models\Address

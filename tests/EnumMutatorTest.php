@@ -9,7 +9,6 @@
  *
  */
 
-
 namespace Konekt\Enum\Eloquent\Tests;
 
 use Konekt\Enum\Eloquent\Tests\Models\Order;

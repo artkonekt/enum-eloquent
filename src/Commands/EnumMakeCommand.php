@@ -36,14 +36,14 @@ class EnumMakeCommand extends GeneratorCommand
     protected function getStub()
     {
         if ($this->option('labels')) {
-            return __DIR__.'/stubs/enum.labels.stub';
+            return __DIR__ . '/stubs/enum.labels.stub';
         }
 
         if ($this->option('boot')) {
-            return __DIR__.'/stubs/enum.boot.stub';
+            return __DIR__ . '/stubs/enum.boot.stub';
         }
 
-        return __DIR__.'/stubs/enum.stub';
+        return __DIR__ . '/stubs/enum.stub';
     }
 
     /**
@@ -54,7 +54,7 @@ class EnumMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Enums';
+        return $rootNamespace . '\Enums';
     }
 
     /**

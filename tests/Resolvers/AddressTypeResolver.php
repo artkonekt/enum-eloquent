@@ -9,7 +9,6 @@
  *
  */
 
-
 namespace Konekt\Enum\Eloquent\Tests\Resolvers;
 
 use Konekt\Enum\Eloquent\Tests\Models\AddressType;

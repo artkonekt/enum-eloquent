@@ -9,7 +9,6 @@
  *
  */
 
-
 namespace Konekt\Enum\Eloquent\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
