@@ -69,6 +69,16 @@ trait CastsEnums
     }
 
     /**
+     * Convert the model's attributes to an array.
+     *
+     * @return array
+     */
+    public function attributesToArray()
+    {
+        return $this->addEnumAttributesToArray(parent::attributesToArray());
+    }
+
+    /**
      * Returns whether the attribute was marked as enum
      *
      * @param $key
@@ -78,6 +88,19 @@ trait CastsEnums
     protected function isEnumAttribute($key)
     {
         return isset($this->enums[$key]);
+    }
+
+    /**
+     * Add enum values to the attributes array
+     *
+     * @param $array
+     * @return array
+     */
+    protected function addEnumAttributesToArray($array)
+    {
+        foreach ($this->enums as $key => $value) {
+            $array[$key] = $this->getAttributeValue($key);
+        }
     }
 
     /**
