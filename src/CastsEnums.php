@@ -68,6 +68,33 @@ trait CastsEnums
         parent::setAttribute($key, $value);
     }
 
+    public static function boot()
+    {
+        parent::boot();
+
+        static::saving(function ($model) {
+            $model->dispatchEvents();
+        });
+    }
+
+    public function dispatchEvents()
+    {
+        $updatedAttributes = $this->getDirty();
+
+        foreach ($updatedAttributes as $attribute => $value) {
+            if ($this->isEnumAttribute($attribute)) {
+                $class = $this->getEnumClass($attribute);
+
+                $enum       = $class::create($value);
+                $eventClass = $enum->event();
+
+                if ($eventClass) {
+                    event(new $eventClass($this));
+                }
+            }
+        }
+    }
+
     /**
      * Returns whether the attribute was marked as enum
      *
@@ -110,33 +137,5 @@ trait CastsEnums
         }
 
         return $result;
-    }
-
-    public static function boot()
-    {
-        parent::boot();
-
-        static::saving(function ($model) {
-            $model->dispatchEvents();
-        });
-    }
-
-
-    public function dispatchEvents()
-    {
-        $updatedAttributes = $this->getDirty();
-
-        foreach ($updatedAttributes as $attribute => $value) {
-            if ($this->isEnumAttribute($attribute)) {
-                $class = $this->getEnumClass($attribute);
-
-                $enum = $class::create($value);
-                $eventClass = $enum->event();
-
-                if ($eventClass) {
-                    event(new $eventClass($this));
-                }
-            }
-        }
     }
 }

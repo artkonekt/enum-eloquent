@@ -330,6 +330,14 @@ abstract class Enum
     }
 
     /**
+     * @return string
+     */
+    public function event()
+    {
+        return static::getEvent($this->value);
+    }
+
+    /**
      * Returns whether the enum instance equals with a value of the same
      * type created from the given const name
      *
@@ -430,14 +438,6 @@ abstract class Enum
     private static function hasEvents()
     {
         return property_exists(static::class, 'events');
-    }
-
-    /**
-     * @return string
-     */
-    public function event()
-    {
-        return static::getEvent($this->value);
     }
 
     /**
