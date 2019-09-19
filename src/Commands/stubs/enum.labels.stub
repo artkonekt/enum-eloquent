@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Konekt\Enum\Enum;
+use Konekt\Enum\Eloquent\Enum;
 
 class DummyClass extends Enum
 {
