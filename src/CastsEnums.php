@@ -99,8 +99,10 @@ trait CastsEnums
     protected function addEnumAttributesToArray($array)
     {
         foreach ($this->enums as $key => $value) {
-            $array[$key] = $this->getAttributeValue($key);
+            $array[$key] = $this->getAttributeValue($key)->value();
         }
+
+        return $array;
     }
 
     /**
