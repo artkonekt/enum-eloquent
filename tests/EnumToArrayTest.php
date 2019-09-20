@@ -12,6 +12,7 @@
 namespace Konekt\Enum\Eloquent\Tests;
 
 use Konekt\Enum\Eloquent\Tests\Models\Order;
+use Konekt\Enum\Eloquent\Tests\Models\OrderV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
 
 class EnumToArrayTest extends TestCase
@@ -99,7 +100,7 @@ class EnumToArrayTest extends TestCase
             return;
         }
 
-        $order = new Order([
+        $order = new OrderV2([
             'number' => 'abc123'
         ]);
 
