@@ -4,6 +4,7 @@
  *
  * @copyright   Copyright (c) 2017 Attila Fulop
  * @author      Attila Fulop
+ * @author      Nick Rupert
  * @license     MIT
  * @since       2017-10-05
  *
@@ -90,19 +91,13 @@ trait CastsEnums
         return isset($this->enums[$key]);
     }
 
-    /**
-     * Add enum values to the attributes array
-     *
-     * @param $array
-     * @return array
-     */
-    protected function addEnumAttributesToArray($array)
+    protected function addEnumAttributesToArray(array $attributes): array
     {
         foreach ($this->enums as $key => $value) {
-            $array[$key] = $this->getAttributeValue($key)->value();
+            $attributes[$key] = $this->getAttributeValue($key)->value();
         }
 
-        return $array;
+        return $attributes;
     }
 
     /**

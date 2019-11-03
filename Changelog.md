@@ -1,10 +1,10 @@
 # Changelog
 ### Konekt Enum Eloquent
 
-## 1.3.2
-##### 2019-09-17
+## Unreleased
+##### 2019-XX-XX
 
-- Added support for Eloquent `toArray()`
+- Added support for Eloquent `toArray()` (enums field values are properly included)
 
 ## 1.3.1
 ##### 2019-09-08
