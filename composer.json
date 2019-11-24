@@ -27,7 +27,7 @@
         "illuminate/database": "5.*|6.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "6.3 - 7.5",
+        "phpunit/phpunit": "6.3 - 7.5|~8.0",
         "illuminate/events": "5.*|6.*",
         "ocramius/package-versions": "^1.2"
     },
@@ -43,9 +43,6 @@
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.3-dev"
-        },
         "laravel": {
             "providers": [
                 "Konekt\\Enum\\Eloquent\\EnumServiceProvider"
