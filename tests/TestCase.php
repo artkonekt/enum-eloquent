@@ -20,7 +20,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
     protected $capsule;
 
-    protected function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
