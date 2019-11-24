@@ -1,6 +1,11 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## 1.4.1
+##### 2019-11-24
+
+- PhpUnit compatibility fix (affects dev mode only)
+
 ## 1.4.0
 ##### 2019-11-03
 
