@@ -1,6 +1,11 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## 1.5.0
+##### 2020-03-06
+
+- Laravel 7 and PHP 7.4 support
+
 ## 1.4.1
 ##### 2019-11-24
 
