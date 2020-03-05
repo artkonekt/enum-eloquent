@@ -116,7 +116,7 @@ class EnumAccessorTest extends TestCase
 
         $this->assertNotNull($order->id);
         $this->assertInstanceOf(\DateTime::class, $order->created_at);
-        $this->assertInternalType('boolean', $order->is_active);
+        $this->assertIsBool($order->is_active);
     }
 
     /**
