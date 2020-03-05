@@ -8,6 +8,7 @@ php:
   - '7.1'
   - '7.2'
   - '7.3'
+  - '7.4'
 
 env:
   - ENUM=2 LARAVEL=5.4
@@ -15,20 +16,22 @@ env:
   - ENUM=2 LARAVEL=5.6
   - ENUM=2 LARAVEL=5.7
   - ENUM=2 LARAVEL=5.8
-  - ENUM=2 LARAVEL=6.5
+  - ENUM=2 LARAVEL=6.18
+  - ENUM=2 LARAVEL=7.0
   - ENUM=3 LARAVEL=5.4
   - ENUM=3 LARAVEL=5.5
   - ENUM=3 LARAVEL=5.6
   - ENUM=3 LARAVEL=5.7
   - ENUM=3 LARAVEL=5.8
-  - ENUM=3 LARAVEL=6.5
+  - ENUM=3 LARAVEL=6.18
+  - ENUM=3 LARAVEL=7.0
 
 matrix:
   exclude:
     - php: '7.1'
-      env: 'ENUM=2 LARAVEL=6.5'
+      env: 'ENUM=2 LARAVEL=6.18'
     - php: '7.1'
-      env: 'ENUM=3 LARAVEL=6.5'
+      env: 'ENUM=3 LARAVEL=6.18'
 
 script:
 - vendor/bin/phpunit -c phpunit.xml tests/
