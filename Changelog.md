@@ -1,6 +1,11 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## 1.6.0
+##### 2020-09-12
+
+- Added Laravel 8 support
+
 ## 1.5.0
 ##### 2020-03-06
 
