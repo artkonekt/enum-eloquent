@@ -12,6 +12,7 @@
 namespace Konekt\Enum\Eloquent\Tests;
 
 use Konekt\Enum\Eloquent\Tests\Models\Order;
+use Konekt\Enum\Eloquent\Tests\Models\OrderStatusV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
 
@@ -113,14 +114,15 @@ class EnumToArrayTest extends TestCase
         }
 
         $order = new OrderV2([
-            'number' => 'abc123'
+            'number' => 'abc123',
+            'status' => null
         ]);
 
         $array = $order->attributesToArray();
 
         $this->assertArrayHasKey('status', $array);
         $this->assertIsString($array['status']);
-        $this->assertEquals($array['status'], OrderStatus::__DEFAULT);
+        $this->assertEquals($array['status'], OrderStatusV2::__default);
     }
 
     private function getEnumVersion()
