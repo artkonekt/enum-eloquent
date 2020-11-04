@@ -21,6 +21,8 @@ use Konekt\Enum\Eloquent\Tests\Models\OrderStatusVX;
 
 class EnumAccessorTest extends TestCase
 {
+    use DetectsEnumVersion;
+
     /**
      * @test
      */
@@ -134,21 +136,5 @@ class EnumAccessorTest extends TestCase
 
         $this->assertInstanceOf(Client::class, $order->client);
         $this->assertEquals($client->id, $order->client->id);
-    }
-
-    private function getEnumVersion()
-    {
-        $raw_version = \PackageVersions\Versions::getVersion('konekt/enum');
-
-        $parts = explode('@', $raw_version);
-
-        return $parts[0];
-    }
-
-    private function getEnumVersionMajor()
-    {
-        $parts = explode('.', $this->getEnumVersion());
-
-        return $parts[0];
     }
 }

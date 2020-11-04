@@ -15,9 +15,12 @@ use Konekt\Enum\Eloquent\Tests\Models\Order;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatusV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
+use Konekt\Enum\Enum;
 
 class EnumToArrayTest extends TestCase
 {
+    use DetectsEnumVersion;
+
     /**
      * @test
      */
@@ -123,21 +126,5 @@ class EnumToArrayTest extends TestCase
         $this->assertArrayHasKey('status', $array);
         $this->assertIsString($array['status']);
         $this->assertEquals($array['status'], OrderStatusV2::__default);
-    }
-
-    private function getEnumVersion()
-    {
-        $raw_version = \PackageVersions\Versions::getVersion('konekt/enum');
-
-        $parts = explode('@', $raw_version);
-
-        return $parts[0];
-    }
-
-    private function getEnumVersionMajor()
-    {
-        $parts = explode('.', $this->getEnumVersion());
-
-        return $parts[0];
     }
 }
