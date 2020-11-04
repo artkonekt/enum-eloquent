@@ -18,6 +18,8 @@ class OrderV2 extends Model
 {
     use CastsEnums;
 
+    protected $table = 'orders';
+
     protected $guarded = ['id'];
 
     protected $casts = [
