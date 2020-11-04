@@ -28,7 +28,7 @@ env:
   - ENUM=3 LARAVEL=5.8
   - ENUM=3 LARAVEL=6.20
   - ENUM=3 LARAVEL=7.0
-  - ENUM=2 LARAVEL=7.29
+  - ENUM=3 LARAVEL=7.29
   - ENUM=3 LARAVEL=8.0
   - ENUM=3 LARAVEL=8.13
 
@@ -50,14 +50,14 @@ matrix:
       env: 'ENUM=2 LARAVEL=8.0'
     - php: '7.1'
       env: 'ENUM=3 LARAVEL=8.0'
-    - php: '7.2'
-      env: 'ENUM=2 LARAVEL=8.0'
-    - php: '7.2'
-      env: 'ENUM=3 LARAVEL=8.0'
     - php: '7.1'
       env: 'ENUM=2 LARAVEL=8.13'
     - php: '7.1'
       env: 'ENUM=3 LARAVEL=8.13'
+    - php: '7.2'
+      env: 'ENUM=2 LARAVEL=8.0'
+    - php: '7.2'
+      env: 'ENUM=3 LARAVEL=8.0'
     - php: '7.2'
       env: 'ENUM=2 LARAVEL=8.13'
     - php: '7.2'
