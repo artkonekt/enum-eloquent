@@ -95,9 +95,9 @@ trait CastsEnums
     {
         foreach ($this->enums as $key => $value) {
             // Don't set if the field is not present (pluck or not selecting them in the SQL can cause it)
-            //if (isset($this->attributes[$key])) {
+            if (isset($this->attributes[$key])) {
                 $attributes[$key] = $this->getAttributeValue($key)->value();
-            //}
+            }
         }
 
         return $attributes;
