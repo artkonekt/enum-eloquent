@@ -1,6 +1,13 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## 1.6.1
+##### 2020-11-04
+
+- Fixed to array conversion exception when the enum field is not actually present in the model
+- Test suite fixes for Composer v2 compatibility (dropped Ocramius Package Manager dev requirement)
+- Various test suite improvements
+
 ## 1.6.0
 ##### 2020-09-12
 
