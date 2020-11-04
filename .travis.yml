@@ -30,8 +30,6 @@ env:
   - ENUM=2 LARAVEL=7.23
   - ENUM=2 LARAVEL=7.24
   - ENUM=2 LARAVEL=7.25
-  - ENUM=2 LARAVEL=7.26
-  - ENUM=2 LARAVEL=7.27
   - ENUM=2 LARAVEL=7.28
 #  - ENUM=3 LARAVEL=8.12
 
@@ -65,6 +63,9 @@ before_install:
 - composer require "konekt/enum:${ENUM}.*" --no-update -v
 - composer require "illuminate/database:${LARAVEL}.*" --no-update -v
 - composer require "illuminate/events:${LARAVEL}.*" --no-update -v
+- composer require "illuminate/support:${LARAVEL}.*" --no-update -v
+- composer require "illuminate/contracts:${LARAVEL}.*" --no-update -v
+- composer require "illuminate/container:${LARAVEL}.*" --no-update -v
 
 install: composer install --no-interaction
 
