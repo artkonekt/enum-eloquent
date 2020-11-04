@@ -5,56 +5,63 @@ cache:
   - "$HOME/.composer/cache"
 
 php:
-#  - '7.1'
-#  - '7.2'
-#  - '7.3'
+  - '7.1'
+  - '7.2'
+  - '7.3'
   - '7.4'
 
 env:
-#  - ENUM=2 LARAVEL=5.4
-#  - ENUM=2 LARAVEL=5.5
-#  - ENUM=2 LARAVEL=5.6
-#  - ENUM=2 LARAVEL=5.7
-#  - ENUM=2 LARAVEL=5.8
-#  - ENUM=2 LARAVEL=6.19
-#  - ENUM=2 LARAVEL=7.0
-#  - ENUM=2 LARAVEL=7.28
-#  - ENUM=2 LARAVEL=8.12
-#  - ENUM=3 LARAVEL=5.4
-#  - ENUM=3 LARAVEL=5.5
-#  - ENUM=3 LARAVEL=5.6
-#  - ENUM=3 LARAVEL=5.7
-#  - ENUM=3 LARAVEL=5.8
-#  - ENUM=3 LARAVEL=6.19
-  - ENUM=2 LARAVEL=7.22
-  - ENUM=2 LARAVEL=7.23
-  - ENUM=2 LARAVEL=7.24
-  - ENUM=2 LARAVEL=7.25
-  - ENUM=2 LARAVEL=7.28
-#  - ENUM=3 LARAVEL=8.12
+  - ENUM=2 LARAVEL=5.4
+  - ENUM=2 LARAVEL=5.5
+  - ENUM=2 LARAVEL=5.6
+  - ENUM=2 LARAVEL=5.7
+  - ENUM=2 LARAVEL=5.8
+  - ENUM=2 LARAVEL=6.20
+  - ENUM=2 LARAVEL=7.0
+  - ENUM=2 LARAVEL=7.29
+  - ENUM=2 LARAVEL=8.0
+  - ENUM=2 LARAVEL=8.13
+  - ENUM=3 LARAVEL=5.4
+  - ENUM=3 LARAVEL=5.5
+  - ENUM=3 LARAVEL=5.6
+  - ENUM=3 LARAVEL=5.7
+  - ENUM=3 LARAVEL=5.8
+  - ENUM=3 LARAVEL=6.20
+  - ENUM=3 LARAVEL=7.0
+  - ENUM=2 LARAVEL=7.29
+  - ENUM=3 LARAVEL=8.0
+  - ENUM=3 LARAVEL=8.13
 
-#matrix:
-#  exclude:
-#    - php: '7.1'
-#      env: 'ENUM=2 LARAVEL=6.19'
-#    - php: '7.1'
-#      env: 'ENUM=3 LARAVEL=6.19'
-#    - php: '7.1'
-#      env: 'ENUM=2 LARAVEL=7.0'
-#    - php: '7.1'
-#      env: 'ENUM=3 LARAVEL=7.0'
-#    - php: '7.1'
-#      env: 'ENUM=2 LARAVEL=7.28'
-#    - php: '7.1'
-#      env: 'ENUM=3 LARAVEL=7.28'
-#    - php: '7.1'
-#      env: 'ENUM=2 LARAVEL=8.12'
-#    - php: '7.1'
-#      env: 'ENUM=3 LARAVEL=8.12'
-#    - php: '7.2'
-#      env: 'ENUM=2 LARAVEL=8.12'
-#    - php: '7.2'
-#      env: 'ENUM=3 LARAVEL=8.12'
+matrix:
+  exclude:
+    - php: '7.1'
+      env: 'ENUM=2 LARAVEL=6.20'
+    - php: '7.1'
+      env: 'ENUM=3 LARAVEL=6.20'
+    - php: '7.1'
+      env: 'ENUM=2 LARAVEL=7.0'
+    - php: '7.1'
+      env: 'ENUM=3 LARAVEL=7.0'
+    - php: '7.1'
+      env: 'ENUM=2 LARAVEL=7.29'
+    - php: '7.1'
+      env: 'ENUM=3 LARAVEL=7.29'
+    - php: '7.1'
+      env: 'ENUM=2 LARAVEL=8.0'
+    - php: '7.1'
+      env: 'ENUM=3 LARAVEL=8.0'
+    - php: '7.2'
+      env: 'ENUM=2 LARAVEL=8.0'
+    - php: '7.2'
+      env: 'ENUM=3 LARAVEL=8.0'
+    - php: '7.1'
+      env: 'ENUM=2 LARAVEL=8.13'
+    - php: '7.1'
+      env: 'ENUM=3 LARAVEL=8.13'
+    - php: '7.2'
+      env: 'ENUM=2 LARAVEL=8.13'
+    - php: '7.2'
+      env: 'ENUM=3 LARAVEL=8.13'
 
 script:
 - vendor/bin/phpunit -c phpunit.xml tests/
