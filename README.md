@@ -1,15 +1,15 @@
 # Konekt Enum Eloquent Bindings
 
 
-[![Travis Build Status](https://img.shields.io/travis/artkonekt/enum-eloquent.svg?style=flat-square)](https://travis-ci.org/artkonekt/enum-eloquent)
+[![Travis Build Status](https://img.shields.io/travis/com/artkonekt/enum-eloquent.svg?style=flat-square)](https://travis-ci.com/artkonekt/enum-eloquent)
 [![Packagist Stable Version](https://img.shields.io/packagist/v/konekt/enum-eloquent.svg?style=flat-square&label=stable)](https://packagist.org/packages/konekt/enum-eloquent)
 [![Packagist downloads](https://img.shields.io/packagist/dt/konekt/enum-eloquent.svg?style=flat-square)](https://packagist.org/packages/konekt/enum-eloquent)
 [![StyleCI](https://styleci.io/repos/105900484/shield?branch=master)](https://styleci.io/repos/105900484)
 [![MIT Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
-This package provides support for auto casting [konekt enum](https://konekt.dev/enum) fields in [Eloquent models](https://laravel.com/docs/5.4/eloquent-mutators).
+This package provides support for auto casting [konekt enum](https://konekt.dev/enum) fields in [Eloquent models](https://laravel.com/docs/8.x/eloquent-mutators).
 
-> Supported Konekt Enum versions are 2.0+ or 3.0+ and Eloquent 5.0+
+> Supported Konekt Enum versions are 2.0+ or 3.0+ and Eloquent 6.0+
 
 [Changelog](Changelog.md)
 
