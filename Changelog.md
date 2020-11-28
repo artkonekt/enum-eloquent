@@ -1,8 +1,8 @@
 # Changelog
 ### Konekt Enum Eloquent
 
-## Unreleased
-##### 2020-XX-YY
+## 1.7.0
+##### 2020-11-28
 
 - Dropped PHP 7.1 & PHP 7.2 support
 - Dropped Laravel 5 support
