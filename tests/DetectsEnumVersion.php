@@ -20,7 +20,7 @@ trait DetectsEnumVersion
 {
     private function getEnumVersion(): string
     {
-        return defined(Enum::class. '::__DEFAULT') ? '3.0.0' : '2.3.0';
+        return defined(Enum::class . '::__DEFAULT') ? '3.0.0' : '2.3.0';
     }
 
     private function getEnumVersionMajor(): int

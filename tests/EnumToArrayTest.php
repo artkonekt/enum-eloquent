@@ -15,7 +15,6 @@ use Konekt\Enum\Eloquent\Tests\Models\Order;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatusV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
-use Konekt\Enum\Enum;
 
 class EnumToArrayTest extends TestCase
 {
