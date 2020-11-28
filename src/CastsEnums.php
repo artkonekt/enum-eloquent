@@ -12,6 +12,8 @@
 
 namespace Konekt\Enum\Eloquent;
 
+use Illuminate\Support\Str;
+
 trait CastsEnums
 {
     /**
@@ -114,15 +116,15 @@ trait CastsEnums
     {
         $result = $this->enums[$key];
         if (strpos($result, '@')) {
-            $class  = str_before($result, '@');
-            $method = str_after($result, '@');
+            $class  = Str::before($result, '@');
+            $method = Str::after($result, '@');
 
             // If no namespace was set, prepend the Model's namespace to the
             // class that resolves the enum class. Prevent this behavior,
             // by setting the resolver class with a leading backslash
             if (class_basename($class) == $class) {
                 $class =
-                    str_replace_last(
+                    Str::replaceLast(
                         class_basename(get_class($this)),
                         $class,
                         self::class
