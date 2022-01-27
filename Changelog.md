@@ -1,6 +1,15 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## Unreleased
+##### 2022-01-XX
+
+- Added PHP 8.1 support
+- Added Laravel 9 support
+- Dropped PHP 7.3 and PHP 7.4 support
+- Dropped Laravel 6 and Laravel 7 support
+- Changed CI from Travis to Github Actions
+
 ## 1.7.0
 ##### 2020-11-28
 
