@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the EnumMutatorTest class.
  *
@@ -73,7 +75,7 @@ class EnumMutatorTest extends TestCase
     public function it_doesnt_accept_scalars_that_arent_valid_enum_values()
     {
         $this->expectException(\UnexpectedValueException::class);
-        $order         = new Order();
+        $order = new Order();
         $order->status = 'wtf';
     }
 }

@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the CastsEnums trait.
  *
@@ -116,7 +118,7 @@ trait CastsEnums
     {
         $result = $this->enums[$key];
         if (strpos($result, '@')) {
-            $class  = Str::before($result, '@');
+            $class = Str::before($result, '@');
             $method = Str::after($result, '@');
 
             // If no namespace was set, prepend the Model's namespace to the

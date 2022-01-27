@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the TestCase class.
  *
@@ -31,7 +33,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
     {
         $this->capsule = new Capsule();
         $this->capsule->addConnection([
-            'driver'   => 'sqlite',
+            'driver' => 'sqlite',
             'database' => ':memory:',
         ]);
 

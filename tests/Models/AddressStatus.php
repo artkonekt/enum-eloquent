@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the AddressStatus class.
  *
@@ -15,7 +17,7 @@ use Konekt\Enum\Enum;
 
 class AddressStatus extends Enum
 {
-    const UNKNOWN   = null;
-    const VALID     = 'valid';
-    const INVALID   = 'invalid';
+    public const UNKNOWN = null;
+    public const VALID = 'valid';
+    public const INVALID = 'invalid';
 }

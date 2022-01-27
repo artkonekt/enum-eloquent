@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the EnumAccessorTest class.
  *
@@ -14,10 +16,10 @@ namespace Konekt\Enum\Eloquent\Tests;
 use Konekt\Enum\Eloquent\Tests\Models\Client;
 use Konekt\Enum\Eloquent\Tests\Models\Order;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
-use Konekt\Enum\Eloquent\Tests\Models\OrderV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatusV2;
-use Konekt\Enum\Eloquent\Tests\Models\OrderVX;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatusVX;
+use Konekt\Enum\Eloquent\Tests\Models\OrderV2;
+use Konekt\Enum\Eloquent\Tests\Models\OrderVX;
 
 class EnumAccessorTest extends TestCase
 {
@@ -111,8 +113,8 @@ class EnumAccessorTest extends TestCase
     public function it_can_still_read_casted_fields()
     {
         $order = Order::create([
-            'number'    => 'KH8FRWAD',
-            'status'    => OrderStatus::PROCESSING,
+            'number' => 'KH8FRWAD',
+            'status' => OrderStatus::PROCESSING,
             'is_active' => 1
         ]);
 
@@ -129,8 +131,8 @@ class EnumAccessorTest extends TestCase
         $client = Client::create(['name' => 'Britney Spears']);
 
         $order = Order::create([
-            'number'    => 'LDYG4G4',
-            'status'    => OrderStatus::PROCESSING,
+            'number' => 'LDYG4G4',
+            'status' => OrderStatus::PROCESSING,
             'client_id' => $client->id
         ]);
 

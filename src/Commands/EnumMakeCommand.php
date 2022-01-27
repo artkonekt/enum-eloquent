@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Konekt\Enum\Eloquent\Commands;
 
 use Illuminate\Console\GeneratorCommand;

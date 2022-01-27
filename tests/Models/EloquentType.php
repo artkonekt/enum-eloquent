@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the EloquentType enum class.
  *
@@ -15,7 +17,7 @@ use Konekt\Enum\Enum;
 
 class EloquentType extends Enum
 {
-    const NADA      = null;
-    const WHATEVER  = 'whatever';
-    const NEVERMIND = 'nevermind';
+    public const NADA = null;
+    public const WHATEVER = 'whatever';
+    public const NEVERMIND = 'nevermind';
 }

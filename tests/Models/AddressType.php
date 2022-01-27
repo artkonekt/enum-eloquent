@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the AddressType class.
  *
@@ -15,6 +17,6 @@ use Konekt\Enum\Enum;
 
 class AddressType extends Enum
 {
-    const BILLING  = 'billing';
-    const SHIPPING = 'shipping';
+    public const BILLING = 'billing';
+    public const SHIPPING = 'shipping';
 }

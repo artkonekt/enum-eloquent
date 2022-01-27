@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the Address class.
  *
@@ -21,7 +23,7 @@ class Address extends Model
     protected $guarded = ['id'];
 
     protected $enums = [
-        'type'   => 'Konekt\\Enum\\Eloquent\\Tests\\Resolvers\\AddressTypeResolver@enumClass',
+        'type' => 'Konekt\\Enum\\Eloquent\\Tests\\Resolvers\\AddressTypeResolver@enumClass',
         'status' => 'AddressStatusResolver@enumClass'
     ];
 }

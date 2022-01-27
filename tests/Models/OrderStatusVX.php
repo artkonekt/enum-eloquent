@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the OrderStatus class with Enum version 2 and 3 default.
  *
@@ -15,11 +17,11 @@ use Konekt\Enum\Enum;
 
 class OrderStatusVX extends Enum
 {
-    const __DEFAULT = self::SUBMITTED;
-    const __default = self::SUBMITTED; // v2 default for backwards compatibility
+    public const __DEFAULT = self::SUBMITTED;
+    public const __default = self::SUBMITTED; // v2 default for backwards compatibility
 
-    const SUBMITTED  = 'submitted';
-    const PROCESSING = 'processing';
-    const SHIPPING   = 'shipping';
-    const COMPLETED  = 'completed';
+    public const SUBMITTED = 'submitted';
+    public const PROCESSING = 'processing';
+    public const SHIPPING = 'shipping';
+    public const COMPLETED = 'completed';
 }

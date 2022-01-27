@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the AAASmokeTest.php class.
  *
@@ -13,7 +15,7 @@ namespace Konekt\Enum\Eloquent\Tests;
 
 class AAASmokeTest extends TestCase
 {
-    const MIN_PHP_VERSION = '8.0.0';
+    public const MIN_PHP_VERSION = '8.0.0';
 
     /**
      * @test

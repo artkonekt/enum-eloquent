@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the EnumAccessorTest class.
  *
@@ -12,9 +14,9 @@
 namespace Konekt\Enum\Eloquent\Tests;
 
 use Konekt\Enum\Eloquent\Tests\Models\Order;
+use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatusV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderV2;
-use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
 
 class EnumToArrayTest extends TestCase
 {
@@ -63,7 +65,7 @@ class EnumToArrayTest extends TestCase
         ]);
 
         $attributesArray = $order->attributesToArray();
-        $array           = $order->toArray();
+        $array = $order->toArray();
 
         $this->assertEquals($array, $attributesArray);
     }
