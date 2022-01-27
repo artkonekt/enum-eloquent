@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 /**
  * Contains the OrderStatus class with Enum version 2 default.
  *

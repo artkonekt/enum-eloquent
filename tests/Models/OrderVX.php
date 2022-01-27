@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 /**
  * Contains the Order model class for Enum version 2 and 3 default.
  *
