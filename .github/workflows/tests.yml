@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         php: ['8.0', '8.1']
-        laravel: ['8.22', '8.81', '9.0']
+        laravel: ['8.22', '8.83', '9.0']
         enum: ['2', '3']
         exclude:
           - php: '8.1'

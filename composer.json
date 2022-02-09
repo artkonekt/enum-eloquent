@@ -3,7 +3,6 @@
     "description": "Enum attribute casting for Eloquent models",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "dev",
     "keywords": ["enum", "konekt", "artkonekt", "laravel", "eloquent"],
     "support": {
         "source": "https://github.com/artkonekt/enum-eloquent"
