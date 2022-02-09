@@ -1,6 +1,11 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## 1.7.2
+##### 2022-02-09
+
+- Tiny composer.json change for final Laravel 9.0 (removed minimum-stability: dev)
+
 ## 1.7.1
 ##### 2022-01-27
 
