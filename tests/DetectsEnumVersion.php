@@ -20,6 +20,10 @@ trait DetectsEnumVersion
 {
     private function getEnumVersion(): string
     {
+        if (method_exists(Enum::class, 'hasNot')) {
+            return '4.0.0';
+        }
+
         return defined(Enum::class . '::__DEFAULT') ? '3.0.0' : '2.3.0';
     }
 

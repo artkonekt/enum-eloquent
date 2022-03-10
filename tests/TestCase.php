@@ -58,6 +58,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         $this->capsule->schema()->create('clients', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->integer('billing_rule')->nullable();
             $table->timestamps();
         });
 

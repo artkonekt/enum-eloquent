@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 namespace Konekt\Enum\Eloquent\Tests;
 
+use Konekt\Enum\Eloquent\Tests\Models\BillingRule;
 use Konekt\Enum\Eloquent\Tests\Models\Client;
 use Konekt\Enum\Eloquent\Tests\Models\Order;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
@@ -139,5 +140,23 @@ class EnumAccessorTest extends TestCase
 
         $this->assertInstanceOf(Client::class, $order->client);
         $this->assertEquals($client->id, $order->client->id);
+    }
+
+    /** @test */
+    public function it_works_with_integer_database_fields()
+    {
+        $clientAny = Client::create(['name' => 'Pawel Jedrzejewsky']);
+        $clientInvoiceOnly = Client::create(['name' => 'Pawel Jedrzejewsky', 'billing_rule' => 1]);
+        $clientNoInvoice = Client::create(['name' => 'Pawel Jedrzejewsky', 'billing_rule' => 0]);
+
+        $this->assertInstanceOf(BillingRule::class, $clientAny->billing_rule);
+        $this->assertNull($clientAny->billing_rule->value());
+
+        $this->assertInstanceOf(BillingRule::class, $clientInvoiceOnly->billing_rule);
+        $this->assertEquals(1, $clientInvoiceOnly->billing_rule->value());
+
+        $this->assertInstanceOf(BillingRule::class, $clientNoInvoice->billing_rule);
+        $this->assertEquals(0, $clientNoInvoice->billing_rule->value());
+
     }
 }
