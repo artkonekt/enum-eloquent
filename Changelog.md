@@ -1,8 +1,8 @@
 # Changelog
 ### Konekt Enum Eloquent
 
-## Unreleased
-##### 2022-03-XX
+## 1.8.0
+##### 2022-03-10
 
 - Added Enum v4 support
 
