@@ -157,6 +157,5 @@ class EnumAccessorTest extends TestCase
 
         $this->assertInstanceOf(BillingRule::class, $clientNoInvoice->billing_rule);
         $this->assertEquals(0, $clientNoInvoice->billing_rule->value());
-
     }
 }
