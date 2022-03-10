@@ -7,9 +7,9 @@
 [![StyleCI](https://styleci.io/repos/105900484/shield?branch=master)](https://styleci.io/repos/105900484)
 [![MIT Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
-This package provides support for auto casting [konekt enum](https://konekt.dev/enum) fields in [Eloquent models](https://laravel.com/docs/8.x/eloquent-mutators).
+This package provides support for auto casting [konekt enum](https://konekt.dev/enum) fields in [Eloquent models](https://laravel.com/docs/9.x/eloquent-mutators).
 
-> Supported Konekt Enum versions are 2.0+ or 3.0+ and Eloquent 8.0+
+> Supported Konekt Enum versions are 2.x, 3.x and 4.x with Eloquent 8.x or 9.x
 
 [Changelog](Changelog.md)
 
