@@ -1,6 +1,12 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## Unreleased
+##### 2022-03-XX
+
+- Changed casting behavior so that other mutators defined on field are also
+  being called before passing the value to the enum constructor
+
 ## 1.8.0
 ##### 2022-03-10
 

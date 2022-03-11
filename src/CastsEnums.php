@@ -30,7 +30,7 @@ trait CastsEnums
         if ($this->isEnumAttribute($key)) {
             $class = $this->getEnumClass($key);
 
-            return $class::create($this->getAttributeFromArray($key));
+            return $class::create(parent::getAttributeValue($key));
         }
 
         return parent::getAttributeValue($key);
