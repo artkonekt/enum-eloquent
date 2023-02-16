@@ -1,6 +1,11 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## Unreleased
+##### 2023-XX-YY
+
+- Added Laravel 10 support
+
 ## 1.8.1
 ##### 2022-03-11
 
