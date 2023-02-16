@@ -5,6 +5,7 @@
 ##### 2023-XX-YY
 
 - Added Laravel 10 support
+- Added PHP 8.2 support
 
 ## 1.8.1
 ##### 2022-03-11
