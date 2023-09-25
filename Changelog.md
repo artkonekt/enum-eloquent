@@ -4,6 +4,7 @@
 ## Unreleased
 ##### 2023-XX-YY
 
+- Bumped minimal Laravel version to 8.52
 - Fixed issue where CastEnum did not take in account hidden or visible properties from Eloquent
 
 ## 1.9.0
