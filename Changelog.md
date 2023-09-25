@@ -1,8 +1,8 @@
 # Changelog
 ### Konekt Enum Eloquent
 
-## Unreleased
-##### 2023-XX-YY
+## 1.9.1
+##### 2023-09-25
 
 - Bumped minimal Laravel version to 8.75
 - Fixed issue where CastEnum did not take in account hidden or visible properties from Eloquent
