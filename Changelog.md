@@ -1,6 +1,11 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## Unreleased
+##### 2023-XX-YY
+
+- Fixed issue where CastEnum did not take in account hidden or visible properties from Eloquent
+
 ## 1.9.0
 ##### 2023-02-16
 

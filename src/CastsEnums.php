@@ -81,7 +81,11 @@ trait CastsEnums
      */
     public function attributesToArray()
     {
-        return $this->addEnumAttributesToArray(parent::attributesToArray());
+        return $this->getArrayableItems(
+            $this->addEnumAttributesToArray(
+                parent::attributesToArray()
+            )
+        );
     }
 
     /**

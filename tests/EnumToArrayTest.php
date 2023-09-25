@@ -18,6 +18,8 @@ use Konekt\Enum\Eloquent\Tests\Models\Order;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatus;
 use Konekt\Enum\Eloquent\Tests\Models\OrderStatusV2;
 use Konekt\Enum\Eloquent\Tests\Models\OrderV2;
+use Konekt\Enum\Eloquent\Tests\Models\Visibility;
+use Konekt\Enum\Eloquent\Tests\Models\VisibilityTalk;
 
 class EnumToArrayTest extends TestCase
 {
@@ -128,5 +130,65 @@ class EnumToArrayTest extends TestCase
         $this->assertArrayHasKey('status', $array);
         $this->assertIsString($array['status']);
         $this->assertEquals($array['status'], OrderStatusV2::__default);
+    }
+
+    /** @test */
+    public function returns_no_enum_if_hidden()
+    {
+        $normal = new Visibility([
+            'number' => 'na321',
+            'talk1' => VisibilityTalk::BLABLA,
+            'talk2' => VisibilityTalk::YADDA,
+        ]);
+
+        $array = $normal->attributesToArray();
+
+        $this->assertArrayHasKey('number', $array);
+        $this->assertArrayNotHasKey('talk1', $array);
+        $this->assertArrayHasKey('talk2', $array);
+        $this->assertIsString($array['talk2']);
+        $this->assertEquals($array['talk2'], VisibilityTalk::YADDA);
+    }
+
+    /** @test */
+    public function returns_no_enum_if_hidden_dynamic()
+    {
+        $dynamic_hidden = new Visibility([
+            'number' => 'na654',
+            'talk1' => VisibilityTalk::BLABLA,
+            'talk2' => VisibilityTalk::YADDA,
+        ]);
+
+        $dynamic_hidden->makeHidden('talk2');
+
+        $array = $dynamic_hidden->attributesToArray();
+
+        $this->assertArrayHasKey('number', $array);
+        $this->assertArrayNotHasKey('talk1', $array);
+        $this->assertArrayNotHasKey('talk2', $array);
+    }
+
+    /** @test */
+    public function returns_enum_if_hidden_made_visible()
+    {
+        $made_visible = new Visibility([
+            'number' => 'na987',
+            'talk1' => VisibilityTalk::BLABLA,
+            'talk2' => VisibilityTalk::YADDA,
+        ]);
+
+        $made_visible->makeVisible('talk1');
+
+        $array = $made_visible->attributesToArray();
+
+        $this->assertArrayHasKey('number', $array);
+
+        $this->assertArrayHasKey('talk1', $array);
+        $this->assertIsString($array['talk1']);
+        $this->assertEquals($array['talk1'], VisibilityTalk::BLABLA);
+
+        $this->assertArrayHasKey('talk2', $array);
+        $this->assertIsString($array['talk2']);
+        $this->assertEquals($array['talk2'], VisibilityTalk::YADDA);
     }
 }
