@@ -1,6 +1,11 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## Unreleased
+##### 2023-XX-YY
+
+- Added PHP 8.3 support
+
 ## 1.9.1
 ##### 2023-09-25
 
