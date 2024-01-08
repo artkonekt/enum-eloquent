@@ -1,6 +1,11 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## Unreleased
+##### 2024-XX-YY
+
+- Added Laravel 11 support (experimental, pre-release)
+
 ## 1.9.2
 ##### 2023-11-17
 
