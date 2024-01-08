@@ -62,7 +62,7 @@ trait CastsEnums
     {
         if ($this->isEnumAttribute($key)) {
             $enumClass = $this->getEnumClass($key);
-            if (! $value instanceof $enumClass) {
+            if (!$value instanceof $enumClass) {
                 $value = new $enumClass($value);
             }
 
