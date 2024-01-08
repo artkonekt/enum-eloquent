@@ -9,7 +9,7 @@
 
 This package provides support for auto casting [konekt enum](https://konekt.dev/enum) fields in [Eloquent models](https://laravel.com/docs/9.x/eloquent-mutators).
 
-> Supported Konekt Enum versions are 2.x, 3.x and 4.x with Eloquent 8.x, 9.x or 1.0x
+> Supported Konekt Enum versions are 2.x, 3.x and 4.x with Eloquent (Laravel) 8 - 11
 
 [Changelog](Changelog.md)
 
