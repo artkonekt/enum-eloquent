@@ -3,7 +3,13 @@
     "description": "Enum attribute casting for Eloquent models",
     "type": "library",
     "license": "MIT",
-    "keywords": ["enum", "konekt", "artkonekt", "laravel", "eloquent"],
+    "keywords": [
+        "enum",
+        "konekt",
+        "artkonekt",
+        "laravel",
+        "eloquent"
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "support": {
@@ -26,14 +32,16 @@
     "require": {
         "php": "^8.0",
         "konekt/enum": "^2.0.2 || ^3.0 | ^4.0",
-        "illuminate/database": "^8.75|9.*|10.*|11.*"
+        "illuminate/database": "^8.75|9.*|10.*|11.* || ^12.0"
     },
     "require-dev": {
         "phpunit/phpunit": "9 - 10",
-        "illuminate/events": "^8.75|9.*|10.*|11.*"
+        "illuminate/events": "^8.75|9.*|10.*|11.* || ^12.0"
     },
     "autoload": {
-        "psr-4": { "Konekt\\Enum\\Eloquent\\": "src/" }
+        "psr-4": {
+            "Konekt\\Enum\\Eloquent\\": "src/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
