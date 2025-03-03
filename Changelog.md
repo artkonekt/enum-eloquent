@@ -1,6 +1,12 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## Unreleased
+##### 2025-XX-YY
+
+- Added Laravel 12 support
+- Added PHP 8.4 support
+
 ## 1.9.3
 ##### 2024-01-08
 
