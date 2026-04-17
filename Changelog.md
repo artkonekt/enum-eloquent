@@ -1,6 +1,14 @@
 # Changelog
 ### Konekt Enum Eloquent
 
+## Unreleased
+##### 2026-XX-YY
+
+- Added Laravel 13 support
+- Added PHP 8.5 support
+- Dropped PHP 8.0 & 8.1 support
+- Dropped Laravel 8, 9, and 10 support (use 1.10 or lower for these)
+
 ## 1.10.0
 ##### 2025-03-03
 
